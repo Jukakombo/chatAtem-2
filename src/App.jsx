@@ -10,7 +10,8 @@ import {
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
 import { Routes, Route } from "react-router-dom";
-import AiContent from "../components/AiContent";
+import AiContent from "./components/AiContent";
+// import AiContent from "../components/AiContent";
 
 const API_KEY = "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";
 // "Explain things like you would to a 10 year old learning how to code."

@@ -1,8 +1,8 @@
 import React from "react";
-import Welcome from "./Welcome";
+// import Welcome from "./Welcome";
 import Text from "./Text";
 import InputQuestion from "./InputQuestion";
-import Question from "./Question";
+// import Question from "./Question";
 import { useState } from "react";
 const API_KEY = "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";
 const systemMessage = {
@@ -89,7 +89,9 @@ const AiContent = () => {
             {message.sender === "ChatGPT" ? (
               <Text aiText={message.message} />
             ) : (
-              <p className="bg-[#2D2B42] p-2 rounded-md my-4">{message.message}</p>
+              <p className="bg-[#2D2B42] p-2 rounded-md my-4">
+                {message.message}
+              </p>
             )}
           </div>
         ))}
