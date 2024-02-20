@@ -1,9 +1,10 @@
-import React from "react";
-// import Welcome from "./Welcome";
+import React from "react"; 
 import Text from "./Text";
+
 import InputQuestion from "./InputQuestion";
 // import Question from "./Question";
 import { useState } from "react";
+import CopyToClipboard from "react-copy-to-clipboard";
 const API_KEY = "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";
 const systemMessage = {
   //  Explain things like you're talking to a software professional with 5 years of experience.
@@ -12,6 +13,7 @@ const systemMessage = {
     "Explain things like you're talking to a software professional with 2 years of experience.",
 };
 const AiContent = () => {
+  const [copy, setCopy] = useState(false);
   const [messages, setMessages] = useState([
     {
       message: "Hello, I'm Alison De Best Ask me anything!",
@@ -81,27 +83,34 @@ const AiContent = () => {
 
   return (
     <div className="w-10/12 m-auto">
-      {/* <Welcome /> */}
-      {/* <Question /> */}
-      <div className="h-screen flex flex-col justify-between">
+      <div className="h-screen flex-col flex justify-between">
         {messages.map((message, i) => (
           <div key={i}>
             {message.sender === "ChatGPT" ? (
-              <Text aiText={message.message} />
+              <Text
+                aiText={message.message}
+                copy={copy}
+                setCopy={setCopy}
+                message={message}
+              />
             ) : (
-              <p className="bg-[#2D2B42] p-2 rounded-md my-4">
-                {message.message}
-              </p>
+              <div>
+                <p className="bg-[#2D2B42] p-2 rounded-md my-4">
+                  {message.message}
+                </p>
+              </div>
             )}
           </div>
         ))}
 
-        <InputQuestion
-          isTyping={isTyping}
-          handleSend={handleSend}
-          inputMessage={inputMessage}
-          setInputMessage={setInputMessage}
-        />
+        <div className=" ">
+          <InputQuestion
+            isTyping={isTyping}
+            handleSend={handleSend}
+            inputMessage={inputMessage}
+            setInputMessage={setInputMessage}
+          />
+        </div>
       </div>
     </div>
   );
