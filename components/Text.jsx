@@ -1,5 +1,4 @@
 import React from "react";
-
 const Text = ({ aiText }) => {
   return (
     <div className="  flex bg-[#333333] p-2 rounded-md">
