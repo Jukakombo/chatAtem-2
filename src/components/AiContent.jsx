@@ -83,7 +83,7 @@ const AiContent = () => {
     <div>
       {/* <Welcome /> */}
       {/* <Question /> */}
-      <div className="h-[calc(100vh-2rem)] flex flex-col justify-between">
+      <div className="h-screen flex flex-col justify-between">
         {messages.map((message, i) => (
           <div key={i}>
             {message.sender === "ChatGPT" ? (

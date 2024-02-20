@@ -8,7 +8,7 @@ const InputQuestion = ({
   isTyping,
 }) => {
   return (
-    <div className="mt-4">
+    <div className="my-4">
       {isTyping && <div>Thinking...</div>}
 
       <div className="bg-[#2D2B42] p-2 rounded-md">

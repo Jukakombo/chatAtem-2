@@ -1,7 +1,7 @@
 import React from "react";
 const Text = ({ aiText }) => {
   return (
-    <div className="  flex bg-[#333333] p-2 rounded-md">
+    <div className="  flex bg-[#333333] mt-4 p-2 rounded-md">
       <img
         src="/ali.png"
         alt="alison"
