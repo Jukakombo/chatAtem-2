@@ -80,7 +80,7 @@ const AiContent = () => {
   }
 
   return (
-    <div>
+    <div className="w-10/12 m-auto">
       {/* <Welcome /> */}
       {/* <Question /> */}
       <div className="h-screen flex flex-col justify-between">

@@ -102,36 +102,6 @@ function App() {
   return (
     <div className="">
       <Routes>
-        <Route
-          path="/v1"
-          element={
-            <div>
-              <MainContainer>
-                <ChatContainer>
-                  <MessageList
-                    scrollBehavior="smooth"
-                    typingIndicator={
-                      isTyping ? (
-                        <TypingIndicator content="ChatGPT is typing" />
-                      ) : null
-                    }
-                  >
-                    {messages.map((message, i) => {
-                      {
-                        /* console.log(message); */
-                      }
-                      return <Message key={i} model={message} />;
-                    })}
-                  </MessageList>
-                  <MessageInput
-                    placeholder="Type message here"
-                    onSend={handleSend}
-                  />
-                </ChatContainer>
-              </MainContainer>
-            </div>
-          }
-        ></Route>
         <Route exact path="/" element={<AiContent />} />
       </Routes>
     </div>
