@@ -30,6 +30,10 @@ const InputQuestion = ({
           </button>
         </form>
       </div>
+      <a href="https://alison-profesional-portfolio.netlify.app" target="blank">
+        {" "}
+        <p className="text-center">Developed by: Alison De Best</p>
+      </a>
     </div>
   );
 };
