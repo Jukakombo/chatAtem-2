@@ -1,0 +1,33 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #0d0c22;
+  color:white;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+}
+
+.input_query{
+  background-color: transparent;
+
+}
+
+.text-question {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+ 
+}
+.text-generated{
+  background-color: #2c2929;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+  padding: 5px;
+}
+
+
+
+ 
