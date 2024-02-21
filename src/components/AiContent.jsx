@@ -83,7 +83,7 @@ const AiContent = () => {
 
   return (
     <div className="w-10/12 m-auto">
-      <div className="h-[calc(100vh-4rem)] md:h-screen flex-col flex justify-between">
+      <div className="h-[calc(100vh-3rem)] md:h-screen flex-col flex justify-between">
         <div className="">
           {messages.map((message, i) => (
             <div key={i}>
