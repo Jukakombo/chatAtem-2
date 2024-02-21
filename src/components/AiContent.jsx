@@ -1,4 +1,4 @@
-import React from "react"; 
+import React from "react";
 import Text from "./Text";
 
 import InputQuestion from "./InputQuestion";
@@ -83,26 +83,27 @@ const AiContent = () => {
 
   return (
     <div className="w-10/12 m-auto">
-      <div className="h-screen flex-col flex justify-between">
-        {messages.map((message, i) => (
-          <div key={i}>
-            {message.sender === "ChatGPT" ? (
-              <Text
-                aiText={message.message}
-                copy={copy}
-                setCopy={setCopy}
-                message={message}
-              />
-            ) : (
-              <div>
-                <p className="bg-[#2D2B42] p-2 rounded-md my-4">
-                  {message.message}
-                </p>
-              </div>
-            )}
-          </div>
-        ))}
-
+      <div className="h-[calc(100vh-10rem)] flex-col flex justify-between">
+        <div className="">
+          {messages.map((message, i) => (
+            <div key={i}>
+              {message.sender === "ChatGPT" ? (
+                <Text
+                  aiText={message.message}
+                  copy={copy}
+                  setCopy={setCopy}
+                  message={message}
+                />
+              ) : (
+                <div>
+                  <p className="bg-[#2D2B42] p-2 rounded-md my-4">
+                    {message.message}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
         <div className=" ">
           <InputQuestion
             isTyping={isTyping}
