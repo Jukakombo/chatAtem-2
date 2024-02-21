@@ -16,7 +16,7 @@ const AiContent = () => {
   const [copy, setCopy] = useState(false);
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I'm Alison De Best Ask me anything!",
+      message: "Hello, I'm Alison De Best, here to answer any questions you may have!",
       sentTime: "just now",
       sender: "ChatGPT",
     },
