@@ -25,7 +25,8 @@ const systemMessage = {
 function App() {
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I'm ChatGPT! Ask me anything!",
+      message:
+        "Hello, I'm Alison De Best, here to answer any questions you may have!",
       sentTime: "just now",
       sender: "ChatGPT",
     },
