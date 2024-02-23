@@ -84,7 +84,9 @@ const AiContent = () => {
   return (
     <div className="w-10/12 m-auto">
       <div className="h-[calc(100vh-4rem)] md:h-screen flex-col flex justify-between">
-        <div className="">
+        <div className="overflow-hidden overflow-scroll">
+        <div className="overflow-scroll h-[calc(100vh-4rem)]">
+
           {messages.map((message, i) => (
             <div key={i}>
               {message.sender === "ChatGPT" ? (
@@ -103,6 +105,7 @@ const AiContent = () => {
               )}
             </div>
           ))}
+        </div>
         </div>
         <div className=" ">
           <InputQuestion
