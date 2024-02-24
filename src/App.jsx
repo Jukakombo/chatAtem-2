@@ -14,7 +14,7 @@ import AiContent from "./components/AiContent";
 import Loader from "./components/Loader";
 // import AiContent from "../components/AiContent";
 
-const API_KEY = "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";
+const API_KEY = "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";
 // "Explain things like you would to a 10 year old learning how to code."
 const systemMessage = {
   //  Explain things like you're talking to a software professional with 5 years of experience.
