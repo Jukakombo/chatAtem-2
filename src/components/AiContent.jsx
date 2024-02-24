@@ -3,9 +3,8 @@ import Text from "./Text";
 
 import InputQuestion from "./InputQuestion";
 // import Question from "./Question";
-import { useState } from "react";
-import CopyToClipboard from "react-copy-to-clipboard";
-const API_KEY = "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";
+import { useState } from "react"; 
+const API_KEY = "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";
 const systemMessage = {
   //  Explain things like you're talking to a software professional with 5 years of experience.
   role: "system",
@@ -16,7 +15,8 @@ const AiContent = () => {
   const [copy, setCopy] = useState(false);
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I'm Alison De Best, here to answer any questions you may have!",
+      message:
+        "Greetings! I'm Alison De Best, ready and eager to assist with any inquiries you might have!",
       sentTime: "just now",
       sender: "ChatGPT",
     },
@@ -85,27 +85,26 @@ const AiContent = () => {
     <div className="w-10/12 m-auto">
       <div className="h-[calc(100vh-4rem)] md:h-screen flex-col flex justify-between">
         <div className="overflow-hidden overflow-scroll">
-        <div className="overflow-scroll h-[calc(100vh-4rem)]">
-
-          {messages.map((message, i) => (
-            <div key={i}>
-              {message.sender === "ChatGPT" ? (
-                <Text
-                  aiText={message.message}
-                  copy={copy}
-                  setCopy={setCopy}
-                  message={message}
-                />
-              ) : (
-                <div>
-                  <p className="bg-[#2D2B42] p-2 rounded-md my-4">
-                    {message.message}
-                  </p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+          <div className="overflow-scroll h-[calc(100vh-4rem)]">
+            {messages.map((message, i) => (
+              <div key={i}>
+                {message.sender === "ChatGPT" ? (
+                  <Text
+                    aiText={message.message}
+                    copy={copy}
+                    setCopy={setCopy}
+                    message={message}
+                  />
+                ) : (
+                  <div>
+                    <p className="bg-[#2D2B42] p-2 rounded-md my-4">
+                      {message.message}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
         <div className=" ">
           <InputQuestion

@@ -22,7 +22,7 @@ const InputQuestion = ({
             rows={1}
             cols={5}
             type="text"
-            placeholder="Type your query here..."
+            placeholder="Please type your query here."
             className="w-full input_query outline-none"
           />
           <button type="submit">
@@ -30,10 +30,8 @@ const InputQuestion = ({
           </button>
         </form>
       </div>
-      <a href="https://alison-profesional-portfolio.netlify.app" target="blank">
-        {" "}
-        <p className="text-center">Developed by: Alison De Best</p>
-      </a>
+
+      <p className="text-center">Developed by: Alison De Best</p>
     </div>
   );
 };

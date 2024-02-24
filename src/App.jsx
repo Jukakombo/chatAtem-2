@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import "./App.css";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
@@ -11,6 +11,7 @@ import {
 } from "@chatscope/chat-ui-kit-react";
 import { Routes, Route } from "react-router-dom";
 import AiContent from "./components/AiContent";
+import Loader from "./components/Loader";
 // import AiContent from "../components/AiContent";
 
 const API_KEY = "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";
@@ -99,12 +100,22 @@ function App() {
         setIsTyping(false);
       });
   }
-
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
   return (
     <div className="">
-      <Routes>
-        <Route exact path="/" element={<AiContent />} />
-      </Routes>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Routes>
+          <Route exact path="/" element={<AiContent />} />
+        </Routes>
+      )}
     </div>
   );
 }

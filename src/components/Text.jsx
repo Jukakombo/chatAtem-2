@@ -6,14 +6,14 @@ const Text = ({ aiText, copy, setCopy, message }) => {
   const [text] = useTypewriter({
     words: [`${aiText}`],
     loop: 1,
-    typeSpeed: 50, 
+    typeSpeed: 50,
   });
   return (
     <div className="flex bg-gray-500 mt-4 p-2 rounded-md">
       <img
         src="/ali.png"
         alt="alison"
-        className="h-[25px] w-[25px] mr-2 rounded-md"
+        className="h-[50px] w-[50px] mr-2 rounded-md"
       />
 
       <pre
