@@ -3,8 +3,8 @@ import Text from "./Text";
 
 import InputQuestion from "./InputQuestion";
 // import Question from "./Question";
-import { useState } from "react"; 
-const API_KEY = "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";
+import { useState } from "react";
+const API_KEY = "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";
 const systemMessage = {
   //  Explain things like you're talking to a software professional with 5 years of experience.
   role: "system",
