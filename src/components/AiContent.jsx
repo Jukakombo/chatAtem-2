@@ -4,7 +4,7 @@ import Text from "./Text";
 import InputQuestion from "./InputQuestion";
 // import Question from "./Question";
 import { useState } from "react";
-const API_KEY = "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";
+const API_KEY = "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";
 const systemMessage = {
   //  Explain things like you're talking to a software professional with 5 years of experience.
   role: "system",
